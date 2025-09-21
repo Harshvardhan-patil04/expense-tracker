@@ -2,7 +2,7 @@ const express = require("express");
 const router = express.Router();
 const User = require("../models/User");
 
-// Signup
+
 router.post("/signup", async (req, res) => {
   try {
     const { username, password } = req.body;
@@ -17,7 +17,6 @@ router.post("/signup", async (req, res) => {
   }
 });
 
-// Login (just for test, Basic Auth used on other routes)
 router.post("/login", async (req, res) => {
   try {
     const { username, password } = req.body;

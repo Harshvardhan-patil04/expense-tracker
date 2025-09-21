@@ -10,17 +10,14 @@ const app = express();
 app.use(cors());
 app.use(bodyParser.json());
 
-// Routes
 app.use("/api/auth", authRoutes);
 app.use("/api/expenses", expenseRoutes);
 
-// Connect to MongoDB
 mongoose.connect("mongodb://127.0.0.1:27017/expense-tracker", {
   useNewUrlParser: true,
   useUnifiedTopology: true
 }).then(() => console.log("MongoDB connected"))
   .catch(err => console.log(err));
 
-// Start server
 const PORT = 5000;
 app.listen(PORT, () => console.log(`Server running on http://localhost:${PORT}`));

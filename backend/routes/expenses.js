@@ -3,10 +3,10 @@ const router = express.Router();
 const Expense = require("../models/Expense");
 const basicAuth = require("../middleware/basicAuth");
 
-// All routes require authentication
+
 router.use(basicAuth);
 
-// Add expense
+
 router.post("/", async (req, res) => {
   try {
     const { category, amount, comments } = req.body;
@@ -18,7 +18,7 @@ router.post("/", async (req, res) => {
   }
 });
 
-// Get all expenses for user
+
 router.get("/", async (req, res) => {
   try {
     const expenses = await Expense.find({ userId: req.user._id }).sort({ createdAt: -1 });
@@ -43,7 +43,7 @@ router.put("/:id", async (req, res) => {
   }
 });
 
-// Delete expense
+
 router.delete("/:id", async (req, res) => {
   try {
     const expense = await Expense.findOneAndDelete({ _id: req.params.id, userId: req.user._id });

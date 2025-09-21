@@ -6,18 +6,13 @@ import Dashboard from "./pages/Dashboard";
 import "./styles.css";
 
 function App() {
-  const [auth, setAuth] = useState(null); // { username, password }
+  const [auth, setAuth] = useState(null); 
 
   return (
     <Router>
       <Routes>
-        {/* Signup page */}
         <Route path="/signup" element={auth ? <Navigate to="/" /> : <Signup />} />
-
-        {/* Login page */}
         <Route path="/login" element={auth ? <Navigate to="/" /> : <Login setAuth={setAuth} />} />
-
-        {/* Dashboard (protected) */}
         <Route path="/" element={auth ? <Dashboard auth={auth} setAuth={setAuth} /> : <Navigate to="/login" />} />
       </Routes>
     </Router>

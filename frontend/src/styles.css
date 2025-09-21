@@ -1,0 +1,259 @@
+/* 🌐 General Page Styling */
+body {
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+  background: linear-gradient(135deg, #89f7fe, #66a6ff);
+  margin: 0;
+  padding: 0;
+  color: #333;
+  min-height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+/* 🟦 Container (Dashboard / Main Box) */
+.container {
+  max-width: 950px;
+  margin: 40px auto;
+  background: #ffffff;
+  padding: 30px 40px;
+  box-shadow: 0px 8px 22px rgba(0, 0, 0, 0.12);
+  border-radius: 14px;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.container:hover {
+  transform: translateY(-5px);
+  box-shadow: 0px 12px 28px rgba(0, 0, 0, 0.15);
+}
+
+/* 🔐 Auth box (Login/Signup) */
+.auth-box {
+  background: #fff;
+  padding: 45px 35px;
+  border-radius: 14px;
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.15);
+  width: 380px;
+  text-align: center;
+  animation: fadeIn 0.6s ease-in-out;
+}
+
+/* Title */
+.auth-box h2 {
+  margin-bottom: 25px;
+  color: #222;
+  font-size: 26px;
+  font-weight: 700;
+}
+
+/* Input fields */
+.auth-box input {
+  width: 100%;
+  padding: 14px;
+  margin: 12px 0;
+  border: 1px solid #ccc;
+  border-radius: 10px;
+  outline: none;
+  font-size: 15px;
+  transition: all 0.3s ease;
+}
+
+.auth-box input:focus {
+  border-color: #36A2EB;
+  box-shadow: 0 0 8px rgba(54, 162, 235, 0.5);
+}
+
+/* Buttons */
+.auth-box button {
+  width: 100%;
+  padding: 14px;
+  margin-top: 18px;
+  border: none;
+  background: linear-gradient(135deg, #36A2EB, #4BC0C0);
+  color: white;
+  border-radius: 10px;
+  font-size: 16px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.auth-box button:hover {
+  background: linear-gradient(135deg, #2a87c5, #389a9a);
+  transform: scale(1.05);
+}
+
+/* Links */
+.auth-box .link {
+  display: block;
+  margin-top: 18px;
+  font-size: 15px;
+  color: #9966FF;
+  cursor: pointer;
+  text-decoration: none;
+  font-weight: 500;
+  transition: 0.3s;
+}
+
+.auth-box .link:hover {
+  color: #7a4fd1;
+  text-decoration: underline;
+}
+
+/* ✨ Animation */
+@keyframes fadeIn {
+  from { opacity: 0; transform: translateY(-15px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+/* 📌 Headings */
+h2, h3 {
+  color: #222;
+  margin-bottom: 20px;
+  text-align: center;
+  font-weight: 600;
+}
+
+/* 📑 Form */
+form {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 12px;
+  margin-bottom: 22px;
+  justify-content: center;
+}
+
+form input {
+  flex: 1;
+  min-width: 200px;
+  padding: 12px;
+  border: 1px solid #ccc;
+  border-radius: 8px;
+  font-size: 15px;
+  transition: border 0.3s, box-shadow 0.3s;
+}
+
+form input:focus {
+  border-color: #36A2EB;
+  outline: none;
+  box-shadow: 0 0 8px rgba(54, 162, 235, 0.3);
+}
+
+form button {
+  padding: 12px 18px;
+  border: none;
+  background: #36A2EB;
+  color: white;
+  border-radius: 8px;
+  font-size: 15px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+form button:hover {
+  background: #2a87c5;
+  transform: scale(1.08);
+}
+
+/* 📊 Expense Table */
+table {
+  width: 100%;
+  border-collapse: collapse;
+  margin-top: 18px;
+  border-radius: 10px;
+  overflow: hidden;
+}
+
+table th, table td {
+  border: 1px solid #eee;
+  padding: 14px;
+  text-align: left;
+  font-size: 15px;
+}
+
+table th {
+  background-color: #f7f7f7;
+  color: #444;
+  font-weight: 600;
+}
+
+table tr:nth-child(even) {
+  background-color: #fafafa;
+}
+
+table tr:hover {
+  background-color: #e8f4ff;
+  transition: 0.2s;
+}
+
+/* 🔘 Buttons */
+button.edit-btn {
+  background-color: #4BC0C0;
+  color: #fff;
+  padding: 8px 14px;
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+button.edit-btn:hover {
+  background-color: #389a9a;
+}
+
+button.delete-btn {
+  background-color: #FF6384;
+  color: #fff;
+  padding: 8px 14px;
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+button.delete-btn:hover {
+  background-color: #e53950;
+}
+
+button.logout-btn {
+  background: linear-gradient(135deg, #9966FF, #8e44ad);
+  color: #fff;
+  padding: 12px 18px;
+  border: none;
+  border-radius: 8px;
+  margin-bottom: 25px;
+  cursor: pointer;
+  display: block;
+  margin-left: auto;
+  font-weight: 600;
+  transition: all 0.3s;
+}
+
+button.logout-btn:hover {
+  background: linear-gradient(135deg, #7a4fd1, #6c3483);
+  transform: scale(1.05);
+}
+
+/* 📊 Chart */
+.pie-chart {
+  max-width: 480px;
+  margin: 28px auto;
+  background: #fafafa;
+  padding: 18px;
+  border-radius: 12px;
+  box-shadow: 0px 6px 15px rgba(0,0,0,0.08);
+}
+
+/* 🔗 Links */
+.link {
+  color: #36A2EB;
+  cursor: pointer;
+  text-decoration: none;
+  font-weight: 500;
+}
+
+.link:hover {
+  color: #2a87c5;
+  text-decoration: underline;
+}
